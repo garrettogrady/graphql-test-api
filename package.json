@@ -1,0 +1,33 @@
+{
+  "name": "peoples-protest-graphql-api",
+  "scripts": {
+    "start": "micro index.js",
+    "deploy": "now --public && now alias",
+    "dev": "micro-dev"
+  },
+  "dependencies": {
+    "express-graphql": "^0.6.12",
+    "firebase": "^5.2.0",
+    "graphql": "^0.13.2",
+    "micro": "^9.3.2",
+    "micro-cors": "^0.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.1",
+    "prettier": "^1.12.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.0",
+    "micro-dev": "^2.2.2"
+  },
+  "now": {
+    "dotenv": true,
+    "name": "pp-api-test",
+    "alias": "pp-api.test.now.sh"
+  },
+  "lint-staged": {
+    "./*.{js,json}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  }
+}
