@@ -1,6 +1,4 @@
-// src/client.js
 //firebase config
-
 const firebase = require('firebase')
 
 const { FIREBASE_KEY, FIREBASE_DOMAIN, FIREBASE_URL, FIREBASE_ID, FIREBASE_BUCKET, FIREBASE_SENDER_ID } = process.env;
@@ -22,7 +20,11 @@ var config = {
   messagingSenderId: FIREBASE_SENDER_ID
 };
 
-firebase.initializeApp(config);
+if (!firebase.apps.length) {
+  firebase.initializeApp(config);
+}
+
+// firebase.initializeApp(config);
 
 module.exports.database = firebase.database();
 module.exports.ref = firebase.database().ref();
