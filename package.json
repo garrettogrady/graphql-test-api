@@ -6,6 +6,7 @@
     "dev": "micro-dev"
   },
   "dependencies": {
+    "dotenv": "^5.0.1",
     "express-graphql": "^0.6.12",
     "firebase": "^5.2.0",
     "graphql": "^0.13.2",
@@ -13,7 +14,6 @@
     "micro-cors": "^0.1.0"
   },
   "devDependencies": {
-    "dotenv": "^5.0.1",
     "prettier": "^1.12.1",
     "husky": "^0.14.3",
     "lint-staged": "^7.1.0",
